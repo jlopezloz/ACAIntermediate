@@ -3,6 +3,20 @@
 & - > this is a reference, unless you change the name of the variable or return the variable at the end it is different. You add it to functions. 
 Always use return instead of echo so you can debugg easier.
 **/
+$personhands = [];
+
+$people = array('Jesus', 'Hey Zeus', ' Hey Seuss');
+
+foreach ($people as $person) {
+    $cardsFromDeck = ['AH', '10C', '3S'];
+    $personhands[$person] = $cardsFromDeck;
+}
+
+echo '<pre>';
+print_r($personhands);
+
+
+die();
 
 $multiarray = array(
     'Player1' => array('Card1', 'Card2', 'Card3'),
@@ -13,8 +27,6 @@ $multiarray = array(
 echo '<pre>';
 print_r($multiarray);
 
-
-die();
 
 /**
  * Teach everyone how to practice karate
