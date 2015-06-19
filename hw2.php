@@ -32,6 +32,13 @@ foreach ($suits as $suit => $color) {
 return $deck;
 }
 
+function colorizeCard($suit, $htmlSuite, $rank)
+{
+	$color = ($suit == 'Diamond' || $suit == 'Heart') ? 'red' : 'black';
+	return "<div style=\"font-size: 1em; color:$color;\">$rank$htmlSuite</div>";
+}
+
+
 /*
 $deck = getDeck();
 echo 'Number of cards in the deck: ' . count($deck) . '</br>';
@@ -99,11 +106,7 @@ function deal($players, $numCards, &$shuffledDeck){
 return $playerhands;	
 }
 
-function colorizeCard($suit, $htmlSuite, $rank)
-{
-    $color = ($suit == 'Diamond' || $suit == 'Heart') ? 'red' : 'black';
-    return "<div style=\"font-size: 1em; color:$color;\">$rank$htmlSuite</div>";
-}
+
 
 
 //$playerhands = deal($players, $numCards, $shuffledDeck);
